@@ -1,4 +1,5 @@
 import { MdLocationOn,MdAttachMoney } from "react-icons/md";
+import { Link } from "react-router-dom";
 // import { MdAttachMoney } from "react-icons/md";
 
 const Job = ({ job }) => {
@@ -10,10 +11,7 @@ const Job = ({ job }) => {
     location,
     job_type,
     salary,
-    job_description,
-    job_responsibility,
-    educational_requirements,
-    experiences,
+    id
   } = job;
   return (
     <div className="card card-compact  bg-base-100 shadow-xl">
@@ -40,7 +38,8 @@ const Job = ({ job }) => {
         </div>
        </div>
         <div className="card-actions ">
-          <button className="btn btn-primary bg-[#7E90FE]">View Details</button>
+          <Link to={`/job/${id}`}> <button className="btn btn-primary bg-[#7E90FE]">View Details</button></Link>
+         
         </div>
       </div>
     </div>
